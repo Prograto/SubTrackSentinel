@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import subtrackLogo from "../assets/subtrack.png";
 
 export default function HomePage() {
   return (
@@ -7,9 +8,16 @@ export default function HomePage() {
       {/* ================= NAVBAR ================= */}
       <header className="border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold">
-            SubTrack <span className="text-indigo-500">Sentinel</span>
-          </h1>
+          <div className="flex items-center gap-3">
+            <img
+              src={subtrackLogo}
+              alt="SubTrack Sentinel"
+              className="h-9 w-9"
+            />
+            <h1 className="text-2xl font-bold">
+              SubTrack <span className="text-indigo-500">Sentinel</span>
+            </h1>
+          </div>
 
           <div className="space-x-4">
             <Link

@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import subtrackLogo from "../assets/subtrack.png";
 
 export default function Navbar() {
   const navigate = useNavigate();
@@ -10,12 +11,19 @@ export default function Navbar() {
 
   return (
     <nav className="bg-white shadow px-6 py-4 flex justify-between items-center">
-      <h1
-        className="text-xl font-bold text-indigo-600 cursor-pointer"
+      <div
+        className="flex items-center gap-3 cursor-pointer"
         onClick={() => navigate("/dashboard")}
       >
-        SubTrack Sentinel
-      </h1>
+        <img
+          src={subtrackLogo}
+          alt="SubTrack Sentinel"
+          className="h-8 w-8"
+        />
+        <h1 className="text-xl font-bold text-indigo-600">
+          SubTrack Sentinel
+        </h1>
+      </div>
 
       <div className="flex items-center gap-4">
         <button
